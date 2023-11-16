@@ -2,15 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.g12.duque.antonio.gestor.tests;
+package com.mycompany.gestor.tests;
 
-import br.g12.duque.antonio.dao.CategoryDao;
-import br.g12.duque.antonio.models.Category;
+import br.g12.duque.gabriela.dao.CategoryDao;
+import br.g12.duque.gabriela.models.Category;
 import javax.swing.JOptionPane;
+import javax.swing.JRootPane;
 
 /**
  *
- * @author judok
+ * @author 08110
  */
 public class InsertCategoryUseCase {
     public static void main(String[] args) {
@@ -26,10 +27,8 @@ public class InsertCategoryUseCase {
         if(success){
             JOptionPane.showMessageDialog(null, "Sucesso!");
         }else{
-           JOptionPane.showMessageDialog(null, "Erro!"); 
+            JOptionPane.showMessageDialog(null, "Erro!");
         }
-        
-        
         
     }
 }
