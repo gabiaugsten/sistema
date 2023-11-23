@@ -16,5 +16,5 @@ public interface IRepositoryCategory {
     public boolean update();
     public boolean delete(); // interface = conjunto de metodos abstratos // abstrato = metodo que nao foi implementado ainda
     public ArrayList findAll();
-    public Category findById(int id); // parametros ==> variaveis locais
+    public Category findById(); // parametros ==> variaveis locais
 }
