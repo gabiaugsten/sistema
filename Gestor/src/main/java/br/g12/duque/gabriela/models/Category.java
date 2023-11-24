@@ -63,6 +63,15 @@ public class Category {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        return this.id+"-"+this.name+"-"+this.description+"\n";
+    }
    
         
     
@@ -74,6 +83,10 @@ public class Category {
         System.out.println(cat2.name+"\n"+cat2.description);
         
         
+    }
+
+    public int Id() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
        
     

@@ -51,7 +51,7 @@ public class CategoryDao implements IRepositoryCategory{
     public boolean update() {
         //1. Definir o comando sql que será executado
         String sql = "UPDATE categories SET "
-                +"SET name = ?, description = ? "
+                +"name = ?, description = ? "
                 +"WHERE id = ?";
         //2. Definir uma variavel que dirá se a operação foi bem sucedida
         boolean success = false;
@@ -66,6 +66,7 @@ public class CategoryDao implements IRepositoryCategory{
             pst.executeUpdate();
             success = true;            
         }catch(SQLException ex){
+            ex.printStackTrace();
             System.out.println("Erro na operação: "+ ex.getMessage());
             success = false;
         }
@@ -98,7 +99,7 @@ public class CategoryDao implements IRepositoryCategory{
     @Override
     public ArrayList findAll() {
         //1. Criar uma lista que armazenará todas as categorias
-       ArrayList<Category> list = new ArrayList<Category>();
+        ArrayList<Category> list = new ArrayList<Category>();
         //2. Definir uma variavel que dirá se a operação foi bem sucedida
         boolean success = false;
         //3. Definir qual o comando sql será executado
@@ -127,7 +128,7 @@ public class CategoryDao implements IRepositoryCategory{
 
     @Override
     public Category findById() {
-        String sql = "SELECT name, description FROM categories "
+        String sql = "SELECT id, name, description FROM categories "
                 +"WHERE id = "+ category.getId();
         Category category = null;
         Connection conn =  Conexao.getConnection();
@@ -152,6 +153,10 @@ public class CategoryDao implements IRepositoryCategory{
             return null;
         }
         return category;
+    }
+
+    public ArrayList<Category> findAall() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
